@@ -99,7 +99,7 @@ const Pricing = () => {
             <div
               key={index}
               className={`rounded-lg shadow-lg overflow-hidden ${
-                plan.highlighted ? 'border-2 border-indigo-600 transform scale-105' : 'border border-gray-200'
+                plan.highlighted ? 'border-2 border-[#ff8e5a] transform scale-105' : 'border border-gray-200'
               }`}
             >
               <div className="bg-white p-8">
@@ -120,8 +120,8 @@ const Pricing = () => {
                 <button
                   className={`mt-8 w-full rounded-md px-4 py-2 text-base font-semibold ${
                     plan.highlighted
-                      ? 'bg-indigo-600 text-white hover:bg-indigo-700'
-                      : 'bg-white text-indigo-600 border border-indigo-600 hover:bg-indigo-50'
+                      ? 'bg-[#ff8e5a] text-white hover:bg-[#e67f4f]'
+                      : 'bg-white text-[#ff8e5a] border border-[#ff8e5a] hover:bg-orange-50'
                   }`}
                 >
                   {plan.buttonText}
@@ -131,7 +131,7 @@ const Pricing = () => {
                 <ul className="space-y-4">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center">
-                      <Check className="w-5 h-5 text-indigo-600 mr-3" />
+                      <Check className="w-5 h-5 text-[#ff8e5a] mr-3" />
                       <span className="text-gray-600">{feature}</span>
                     </li>
                   ))}

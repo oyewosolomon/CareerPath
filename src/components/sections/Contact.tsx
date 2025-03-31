@@ -1,7 +1,6 @@
 import React, { useState, FormEvent } from 'react';
-import { Calendar, Clock, Mail, MessageSquare, Phone, MapPin } from 'lucide-react';
+import { Calendar, Clock, Mail, MessageSquare, Users, Award, Shield } from 'lucide-react';
 
-// Define the type for the form data
 interface FormData {
   name: string;
   email: string;
@@ -12,7 +11,6 @@ interface FormData {
 }
 
 const Contact: React.FC = () => {
-  // Initialize state with the FormData type
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
@@ -22,75 +20,93 @@ const Contact: React.FC = () => {
     preferredTime: ''
   });
 
-  // Handle form submission with proper event type
   const handleSubmit = (e: FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
-    // Handle form submission
     console.log('Form submitted:', formData);
   };
 
   return (
-    <div className="bg-white py-24">
+    <div className="bg-gradient-to-b from-white to-gray-50 py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-gray-900 sm:text-5xl">
+            Ready to Transform Your Career?
+          </h2>
+          <p className="mt-6 text-xl text-gray-600 max-w-3xl mx-auto">
+            Connect with our career specialists to unlock your professional potential
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Left side - Contact Info */}
-          <div>
-            <h2 className="text-3xl font-bold text-gray-900">
-              Ready to Transform Your Career?
-            </h2>
-            <p className="mt-4 text-lg text-gray-600">
-              Schedule a personalized demo to see how CareerPath AI can accelerate your professional growth.
-            </p>
-
-            <div className="mt-8 space-y-6">
-              <div className="flex items-center">
-                <Phone className="w-6 h-6 text-indigo-600 mr-4" />
-                <div>
-                  <h3 className="text-sm font-medium text-gray-900">Phone</h3>
-                  <p className="mt-1 text-gray-600">+1 (888) 123-4567</p>
+          <div className="space-y-8">
+            <div className="bg-white rounded-2xl p-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                Why Connect With Us
+              </h3>
+              
+              <div className="space-y-8">
+                <div className="flex">
+                  <div className="flex-shrink-0 bg-orange-100 rounded-lg p-3 text-[#ff8e5a]">
+                    <Users className="w-6 h-6" />
+                  </div>
+                  <div className="ml-4">
+                    <h4 className="text-lg font-semibold text-gray-900">Expert Guidance</h4>
+                    <p className="mt-1 text-gray-600">
+                      Get personalized advice from career coaches with 10+ years of industry experience
+                    </p>
+                  </div>
                 </div>
-              </div>
 
-              <div className="flex items-center">
-                <Mail className="w-6 h-6 text-indigo-600 mr-4" />
-                <div>
-                  <h3 className="text-sm font-medium text-gray-900">Email</h3>
-                  <p className="mt-1 text-gray-600">demo@careerpathai.com</p>
+                <div className="flex">
+                  <div className="flex-shrink-0 bg-orange-100 rounded-lg p-3 text-[#ff8e5a]">
+                    <Award className="w-6 h-6" />
+                  </div>
+                  <div className="ml-4">
+                    <h4 className="text-lg font-semibold text-gray-900">Proven Results</h4>
+                    <p className="mt-1 text-gray-600">
+                      95% of users report career advancement within 6 months of using our platform
+                    </p>
+                  </div>
                 </div>
-              </div>
 
-              <div className="flex items-center">
-                <MapPin className="w-6 h-6 text-indigo-600 mr-4" />
-                <div>
-                  <h3 className="text-sm font-medium text-gray-900">Office</h3>
-                  <p className="mt-1 text-gray-600">123 Innovation Drive<br />San Francisco, CA 94105</p>
+                <div className="flex">
+                  <div className="flex-shrink-0 bg-orange-100 rounded-lg p-3 text-[#ff8e5a]">
+                    <Shield className="w-6 h-6" />
+                  </div>
+                  <div className="ml-4">
+                    <h4 className="text-lg font-semibold text-gray-900">Trusted Platform</h4>
+                    <p className="mt-1 text-gray-600">
+                      Join 1M+ professionals who trust us with their career development
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div className="mt-12 p-6 bg-indigo-50 rounded-lg">
-              <h3 className="text-lg font-semibold text-gray-900">What to Expect</h3>
-              <ul className="mt-4 space-y-3">
-                <li className="flex items-start">
-                  <div className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-600 text-white flex items-center justify-center text-sm mt-0.5">1</div>
-                  <p className="ml-3 text-gray-600">Personalized platform walkthrough</p>
-                </li>
-                <li className="flex items-start">
-                  <div className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-600 text-white flex items-center justify-center text-sm mt-0.5">2</div>
-                  <p className="ml-3 text-gray-600">Q&A session with our career experts</p>
-                </li>
-                <li className="flex items-start">
-                  <div className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-600 text-white flex items-center justify-center text-sm mt-0.5">3</div>
-                  <p className="ml-3 text-gray-600">Custom implementation plan</p>
-                </li>
-              </ul>
+            <div className="bg-orange-100 rounded-2xl p-8 text-gray-600">
+              <h3 className="text-2xl font-bold mb-6">Get Instant Help</h3>
+              <div className="flex items-center space-x-4">
+                <Mail className="w-6 h-6" />
+                <div>
+                  <p className="font-medium">Email our support team</p>
+                  <p className="text-gray-600">support@careerpathai.com</p>
+                </div>
+              </div>
+              <p className="mt-6 text-gray-600">
+                Typical response time: <span className="font-semibold">under 2 hours</span>
+              </p>
             </div>
           </div>
 
           {/* Right side - Contact Form */}
-          <div className="bg-white rounded-lg shadow-lg p-8">
-            <h3 className="text-xl font-semibold text-gray-900 mb-6">Schedule Your Demo</h3>
-            <form onSubmit={handleSubmit} className="space-y-6">
+          <div className="bg-white rounded-2xl overflow-hidden">
+            <div className="bg-gradient-to-r from-orange-100 to-orange-200 p-6 text-gray-600">
+              <h3 className="text-2xl font-bold">Schedule Your Consultation</h3>
+              <p className="mt-2 text-gray-600">Complete the form and we'll get back to you within 24 hours</p>
+            </div>
+            
+            <form onSubmit={handleSubmit} className="p-8 space-y-6">
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700">
@@ -101,7 +117,7 @@ const Contact: React.FC = () => {
                     id="name"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                    className="mt-1 block w-full p-2 rounded-lg border-gray-300 shadow-sm focus:border-[#ff8e5a] focus:ring-[#ff8e5a]"
                   />
                 </div>
                 <div>
@@ -113,76 +129,46 @@ const Contact: React.FC = () => {
                     id="email"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                    className="mt-1 block w-full p-2 rounded-lg border-gray-300 shadow-sm focus:border-[#ff8e5a] focus:ring-[#ff8e5a]"
                   />
                 </div>
               </div>
 
               <div>
                 <label htmlFor="company" className="block text-sm font-medium text-gray-700">
-                  Company
+                  Phone (Optional)
                 </label>
                 <input
                   type="text"
                   id="company"
                   value={formData.company}
                   onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                  className="mt-1 block w-full p-2 rounded-lg border-gray-300 shadow-sm focus:border-[#ff8e5a] focus:ring-[#ff8e5a]"
                 />
-              </div>
-
-              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-                <div>
-                  <label htmlFor="preferredDate" className="block text-sm font-medium text-gray-700">
-                    Preferred Date
-                  </label>
-                  <input
-                    type="date"
-                    id="preferredDate"
-                    value={formData.preferredDate}
-                    onChange={(e) => setFormData({ ...formData, preferredDate: e.target.value })}
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="preferredTime" className="block text-sm font-medium text-gray-700">
-                    Preferred Time
-                  </label>
-                  <select
-                    id="preferredTime"
-                    value={formData.preferredTime}
-                    onChange={(e) => setFormData({ ...formData, preferredTime: e.target.value })}
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                  >
-                    <option value="">Select a time</option>
-                    <option value="9:00">9:00 AM</option>
-                    <option value="10:00">10:00 AM</option>
-                    <option value="11:00">11:00 AM</option>
-                    <option value="13:00">1:00 PM</option>
-                    <option value="14:00">2:00 PM</option>
-                    <option value="15:00">3:00 PM</option>
-                  </select>
-                </div>
               </div>
 
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700">
-                  Additional Information
+                  Your Career Goals
                 </label>
-                <textarea
-                  id="message"
-                  rows={4}
-                  value={formData.message}
-                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                />
+                <div className="mt-1 relative">
+                  <MessageSquare className="absolute left-3 top-3 w-5 h-5 text-gray-400" />
+                  <textarea
+                    id="message"
+                    rows={4}
+                    value={formData.message}
+                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                    className="block w-full pl-10 rounded-lg border-gray-300 shadow-sm focus:border-[#ff8e5a] focus:ring-[#ff8e5a]"
+                    placeholder="Tell us about your career aspirations and challenges..."
+                  />
+                </div>
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-indigo-600 text-white px-6 py-3 rounded-md hover:bg-indigo-700 transition-colors duration-200"
+                className="w-full bg-gradient-to-r from-[#ff8e5a] to-[#ff6e3a] text-white px-6 py-4 rounded-lg hover:from-[#ff6e3a] hover:to-[#ff8e5a] transition-all duration-300 font-semibold"
               >
-                Schedule Demo
+                Schedule Free Consultation
               </button>
             </form>
           </div>

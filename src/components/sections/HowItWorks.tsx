@@ -25,7 +25,7 @@ const HowItWorks = () => {
       icon: Briefcase,
       title: "4. Get Matched",
       description: "Connect with employers looking for your exact skill set through our AI matching system.",
-      color: "bg-pink-100 text-pink-600"
+      color: "bg-[#ff8e5a] text-orange-50"
     }
   ];
 
@@ -65,7 +65,7 @@ const HowItWorks = () => {
         </div>
 
         <div className="mt-16 text-center">
-          <button className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700">
+          <button className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-[#ff8e5a] hover:bg-[#e67f4f] transition-colors duration-200">
             Start Your Journey
           </button>
         </div>

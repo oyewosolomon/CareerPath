@@ -24,6 +24,8 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 222 89% 51%;
     --radius: 0.75rem;
+    --font-gelasio: 'Gelasio', serif;
+    --font-sans: 'ui-sans-serif', system-ui, sans-serif;
   }
 
   .dark {
@@ -46,10 +48,37 @@
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 224.3 76.3% 48%;
+    --font-gelasio: 'Gelasio', serif;
+    --font-sans: 'ui-sans-serif', system-ui, sans-serif;
   }
 
   * {
     @apply border-border;
+  }
+
+   /* Apply Gelasio to headings */
+   h1, h2, h3, h4 {
+    font-family: var(--font-gelasio);
+    @apply font-bold; /* 700 weight */
+    letter-spacing: -0.015em;
+    line-height: 1.2;
+  }
+
+  /* Body text remains sans-serif */
+  body {
+    font-family: var(--font-sans);
+  }
+
+  /* Elegant italics */
+  em, i, blockquote {
+    font-family: var(--font-gelasio);
+    font-style: italic;
+  }
+
+  /* Decorative initial caps */
+  .initial-cap::first-letter {
+    @apply float-left text-5xl md:text-6xl pr-2 leading-none -mt-1;
+    font-family: var(--font-gelasio);
   }
   body {
     @apply bg-background text-foreground;

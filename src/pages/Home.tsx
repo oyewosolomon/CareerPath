@@ -38,12 +38,12 @@ export default function Home() {
   return (
     <main>
       <Hero/>
-      <AboutSection/>
       <Features/>
+      <AboutSection/>
       <HowItWorks/>
 
       <PricingSection/>
-      <Testimonials/>
+      {/* <Testimonials/> */}
 
 
       <Contact/>
