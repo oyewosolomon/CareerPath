@@ -25,8 +25,8 @@ const Pricing = () => {
       name: "Professional",
       description: "Ideal for career advancement",
       price: {
-        monthly: 29,
-        annual: 19
+        monthly: "80,000",
+        annual: "20,000"
       },
       features: [
         "Advanced skill assessments",
@@ -111,7 +111,7 @@ const Pricing = () => {
                 </p>
                 <p className="mt-8">
                   <span className="text-4xl font-bold text-gray-900">
-                    {plan.price[isAnnual ? 'annual' : 'monthly'] === null ? 'Custom' : `$${plan.price[isAnnual ? 'annual' : 'monthly']}`}
+                    {plan.price[isAnnual ? 'annual' : 'monthly'] === null ? 'Custom' : `₦${plan.price[isAnnual ? 'annual' : 'monthly']}`}
                   </span>
                   {plan.price[isAnnual ? 'annual' : 'monthly'] !== null && (
                     <span className="text-gray-600">/month</span>
